@@ -1,18 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JogodavelhaModule } from './jogodavelha/jogodavelha.module';
+import { JogodavelhaService } from './jogodavelha/shared/jogodavelha.service';
 
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule,   
+    JogodavelhaModule   
   ],
-  providers: [],
+  providers: [
+    JogodavelhaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
